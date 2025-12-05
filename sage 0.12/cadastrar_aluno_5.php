@@ -61,6 +61,8 @@
 			
 			
 		</form>
+
+		<?php require 'php/inc/execel.inc' ?>
 		</div>
 	</div>
 	
