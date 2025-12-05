@@ -1,0 +1,519 @@
+@import url('https://fonts.cdnfonts.com/css/neo-sans-std');
+
+:root {
+  --azul: #1a4b9f; /*Azul SENAI*/
+  --laranja: #ef5e31; /*Laranja SENAI*/
+  --branco: #ffffff; 
+  --preto: #000000;
+  --cinza: #b4b4b4;
+  --azul-claro: #5378b7;
+  --cinza-claro: #eee;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: 'Neo Sans Std';
+}
+
+header {
+    background: var(--azul);
+    height: 90px;
+    display: flex;
+    width: 100%;
+    justify-content: flex-start; 
+    border-bottom: 5px solid var(--laranja);
+    position: fixed;
+    margin: 0;
+    z-index: 1000;
+}
+
+
+
+
+
+.imagens_menu {
+    display: flex;
+    align-items: center; 
+    gap: 20px;
+}
+
+.menu_flutuante, .logo_senai, .nome_projeto {
+    display: inline-block;
+}
+
+.logo_senai {
+    margin-left: 2.5%;
+    margin-top: 20px;
+}
+
+.menu_flutuante {
+    margin-left: 1.5%;
+    margin-top: 20px;
+}
+
+.nome_projeto {
+    color: var(--branco); 
+    margin: 0; 
+    font-size: 30px;
+    white-space: nowrap; 
+    margin-top: 15px;
+    margin-left: 10%;
+}
+
+.titulo_principal{
+    font-size: 30px;
+    text-shadow: 5px 5px 5px var(--cinza) ;
+    text-align: center;
+    margin-top: 2vh;
+}
+
+.titulo_aluno{
+    font-size: 30px;
+    background: var(--azul);
+    width: 90%;
+    border-radius: 8px 8px 0px 0px;
+}
+
+.dados_alunos{
+    margin-left: 5%;
+
+    table {
+    width:90%;
+    border-collapse: collapse;
+    background: var(--branco);
+    margin-bottom: 40px;
+    border-radius: 8px;
+    overflow: hidden;
+    }
+}
+
+.container {
+    width: 80%;
+    border: 4px solid var(--azul);
+    border-radius: 20px;
+    box-shadow: 20px 20px 20px #b4b4b4;
+    margin-left: 10%;
+    margin-top: 20px;
+}
+
+.container2 {
+    width: 60%;
+    border: 4px solid var(--azul);
+    border-radius: 20px;
+    box-shadow: 20px 20px 20px #b4b4b4;
+    margin-left: 20%;
+    margin-top: 20px;
+}
+
+/* Menu vertical - Agora fixo à esquerda da tela */
+.menu_vertical {
+    position: fixed; /* Fixo na tela, não relativo ao botão */
+    top: 90px; /*Logo abaixo do header (altura de 90px)*/
+    left: 0; /* Colado à esquerda da tela */
+    background-color: var(--azul); /* Fundo azul para combinar com o header */
+    z-index: 100; /* Garante que fique acima de outros elementos */
+    display: none; /* Inicialmente oculto */
+    list-style: none; /* Remove marcadores da lista */
+    padding: 0;
+    margin: 0;
+    width: 200px; /* Largura do menu */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Sombra opcional */
+    border-radius: 0px 0px 15px 15px;
+}
+
+/* Itens do menu */
+.menu_vertical li {
+    margin: 0;
+}
+
+/* Links do menu */
+.menu_vertical a {
+    display: flex; /* Muda de block para flex */
+    align-items: center; /* Alinha verticalmente no centro */
+    gap: 10px; /* Espaço entre a imagem e o texto */
+    padding: 10px 15px;
+    text-decoration: none;
+    color: var(--branco);
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.menu_vertical a:hover {
+    background-color: var(--azul-claro);
+}
+
+/* Remove a margem superior dos ícones */
+.icons img {
+    margin-top: 0; /* Remove o margin-top que estava desalinhando */
+    vertical-align: middle; /* Garante alinhamento vertical */
+}
+
+.botao{
+    cursor: pointer;
+}
+.cadastro_alunos {
+    background: var(--laranja);
+    width: 80%;
+    text-align: center;
+    margin-top: 30px;
+    margin-left: 10%;
+    min-height: 60px;
+    border-radius: 6px;
+    display: flex; /* Adiciona Flexbox para centralização */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente (reforça o text-align) */
+    box-shadow: 10px 10px 10px var(--cinza);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.cadastro_alunos:hover{
+    transform: scale(1.01);
+}
+
+a {
+    text-decoration: none;
+}
+
+.botao_cadastrar_aluno {
+    color: var(--branco);
+    font-size: 25px;
+}
+
+.cadastro_prof {
+    background: var(--azul);
+    width: 80%;
+    text-align: center;
+    margin-top: 30px;
+    margin-left: 10%;
+    min-height: 60px;
+    border-radius: 6px;
+    display: flex; /* Adiciona Flexbox para centralização */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente (reforça o text-align) */
+    box-shadow: 10px 10px 10px var(--cinza);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.cadastro_prof:hover{
+    transform: scale(1.01);
+}
+
+
+.botao_cadastrar_prof {
+    color: var(--branco);
+    font-size: 25px;
+}
+
+.cartoes_series {
+    width: 90%;
+    margin: 20px auto; /* Centraliza o contêiner e adiciona margem */
+    display: flex; /* Flexbox para alinhar os cartões lado a lado */
+    gap: 8%; /* Espaçamento de 5% entre os cartões */
+    justify-content: flex-start; /* Alinha à esquerda, mas o gap cuida do espaçamento */
+    padding: 10px; /* Espaçamento interno opcional */
+}
+
+.sexto_ano, .setimo_ano, .oitavo_ano, .nono_ano {
+    width: 18.75%;
+    background: var(--azul);
+    min-height: 250px; 
+    border-radius: 10px; 
+    display: flex; /* Flexbox para empilhar conteúdo verticalmente */
+    flex-direction: column; /* Empilha "ALUNO" e a série */
+    align-items: center; /* Centraliza horizontalmente */
+    justify-content: center; /* Centraliza verticalmente */
+    color: var(--branco);
+    box-shadow: 10px 10px 10px var(--cinza); 
+    transition: transform 0.3s ease;
+    text-align: center;
+    cursor: pointer;
+}
+
+.sexto_ano:hover, .setimo_ano:hover, .oitavo_ano:hover, .nono_ano:hover {
+    transform: scale(1.05);
+}
+
+/* Estilos para o título "ALUNO" dentro dos cartões */
+.titulo_cartao {
+    font-size: 20px; /* Fonte maior para "ALUNO" */
+    font-weight: bold;
+    margin-bottom: 10px; /* Espaço entre "ALUNO" e a série */
+}
+
+/* Estilos para a série (ex: "6° ANO") dentro dos cartões */
+.serie_cartao {
+    font-size: 30px; /* Fonte menor para a série */
+    font-weight: bold;
+}
+
+.icons img{
+    margin-top: 5px;
+}
+
+.pesquisa{
+    margin-left: 5%;
+
+    input {
+        border-radius: 15px;
+        border: 3px solid var(--azul);
+        height: 40px;
+        width: 20%;
+    }
+
+    button {
+        height: 40px;
+        width: 30px;
+        color:var(--azul);
+        font-weight: bold;
+    }
+}
+
+.pesquisa2{
+    margin-left: 5%;
+
+    input {
+        border-radius: 15px;
+        border: 3px solid var(--laranja);
+        height: 40px;
+        width: 20%;
+    }
+
+    button {
+        height: 40px;
+        width: 30px;
+        color:var(--laranja);
+        font-weight: bold;
+    }
+}
+
+.tb_resultados{
+    margin-left: 5%;
+}
+
+.tb_titulo {
+    background: var(--azul);
+    color: var(--branco);
+    width: 90%;
+}
+
+.tb_titulo2 {
+    background: var(--azul);
+    color: var(--branco);
+    width: 90%;
+    height: 50px;
+    font-size: 30px;
+}
+
+table {
+    width: 90%;
+    border-collapse: collapse;
+    background: var(--branco);
+    margin-bottom: 40px;
+    border-radius: 8px;
+    overflow: hidden;
+    /* border: 3px solid var(--azul); */
+}
+
+th,td {
+    padding: 10px;
+    border-bottom: 1px solid var(--preto);
+    text-align: left;
+}
+
+tr {
+    border-left: 2px solid var(--laranja);
+    border-right: 2px solid var(--laranja);
+    border-bottom: 2px solid var(--laranja);
+
+}
+th{
+    background: var(--azul);
+    color: var(--branco);
+}
+
+.tb_parte_laranja {
+    background: var(--laranja);
+    color: var(--branco);
+}
+
+.tb_parte_laranja:hover{
+    background: var(--laranja);
+}
+
+tr:hover {
+    background: var(--cinza-claro);
+}
+
+.cadastro_aluno {
+
+    input {
+        border-radius: 20px;
+        border: 3px solid var(--laranja);
+        width: 80%;
+        height: 40px;
+        margin-left: 10%;
+    }
+
+    input:focus{
+        border: 3px solid var(--azul);
+    }
+
+    input:hover{
+        background: var(--cinza-claro);
+    }
+
+    label{
+        font-weight: bold;
+        margin-left: 10%;
+    }
+
+    select {
+        border-radius: 20px;
+        border: 3px solid var(--laranja);
+        width: 80%;
+        height: 40px;
+        margin-left: 10%;
+    }
+
+    select:focus{
+        border: 3px solid var(--azul);
+    }
+
+    select:hover{
+        background: var(--cinza-claro);
+    }
+
+    button {
+        height: 50px;
+        width: 40%;
+        background: var(--azul);
+        box-shadow: 10px 10px 10px var(--cinza);
+        color: var(--branco);
+        margin-left: 30%;
+        border-radius: 15px;
+    }
+}
+
+.botao_pesquisar{
+    cursor: pointer;
+}
+
+	.professor_info {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		.professor_left {
+			display: flex;
+			align-items: center;
+			gap: 15px;
+		}
+
+		.professor_foto {
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+			object-fit: cover;
+		}
+
+		.professor_texto {
+			display: flex;
+			flex-direction: column;
+			gap: 3px;
+		}
+
+		.professor_nome {
+			font-weight: bold;
+			color: #003366;
+		}
+
+		.professor_curso {
+			font-size: 14px;
+			color: var(--cinza);
+		}
+
+		.seta {
+			transition: transform 0.3s;
+			color: var(--azul);
+		}
+
+		.seta.ativa {
+			transform: rotate(180deg);
+		}
+
+		.detalhes_row {
+			display: none;
+			background-color: #f9f9f9;
+		}
+
+		.detalhes_row.mostrar {
+			display: table-row;
+		}
+
+		.detalhes_content {
+			padding: 20px;
+			border-left: 4px solid #ff6600;
+		}
+
+		.detalhes_grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+			gap: 15px;
+			margin-top: 10px;
+		}
+
+		.detalhe_item {
+			background-color: white;
+			padding: 12px;
+			border-radius: 5px;
+			border: 1px solid #e0e0e0;
+		}
+
+		.detalhe_label {
+			color: #666;
+			font-size: 12px;
+			text-transform: uppercase;
+			margin-bottom: 5px;
+		}
+
+		.detalhe_valor {
+			color: #003366;
+			font-size: 14px;
+            line-height: 2;
+		}
+
+		.acoes {
+			margin-top: 15px;
+			display: flex;
+			gap: 10px;
+		}
+
+		.btn_acao {
+			padding: 8px 15px;
+			border: none;
+			border-radius: 4px;
+			cursor: pointer;
+			font-size: 14px;
+			transition: opacity 0.3s;
+		}
+
+		.btn_acao:hover {
+			opacity: 0.8;
+		}
+
+		.btn_editar {
+			background-color: var(--laranja);
+			color: white;
+		}
+
+		.btn_excluir {
+			background-color: var(--azul);
+			color: white;
+		}
+		
